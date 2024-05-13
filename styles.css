@@ -462,3 +462,69 @@ nav {
         display: none;
     }
 }
+
+@media (width < 600px) {
+    
+
+    .home {
+        display: none;
+    }
+
+    .header__container h1 {
+        display: none;
+    }
+
+    .header__container p {
+        font-size: 1rem;
+    }
+
+    .nav__links a {
+        font-size: 0.8rem;
+    }
+
+    .title .section__header {
+        font-size: 1.5rem;
+    }
+
+    .title .support-text {
+        font-size: 0.7rem;
+    }
+
+    .about-us__text p {
+        font-size: 0.8rem;
+    }
+
+    .about-us__text h2 {
+        font-size: 1rem;
+    }
+
+    .valores p {
+        font-size: 0.8rem;
+    }
+
+    .valores h2 {
+        font-size: 1rem;
+    }
+
+    .service__card h4 {
+        font-size: 1rem;
+    }
+
+    .service__card p,
+    .service__card a {
+        font-size: 0.8rem;
+    }
+
+    .products__card h4 {
+        font-size: 1rem;
+    }
+
+    .products__card ul li,
+    .products__card p {
+        font-size: 0.8rem;
+    }
+
+    .service__grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
