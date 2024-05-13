@@ -393,7 +393,7 @@ nav {
 .container__floating-links {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -406,10 +406,6 @@ nav {
 .container__floating-links a .r1 {
     color: green;
     font-size: 50px;
-}
-
-.container__floating-links a .r2 {
-    color: blue;
 }
 
 .container__floating-links a i{
