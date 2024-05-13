@@ -69,12 +69,10 @@ body {
 /* Navegación */
 
 header {
-    background-image: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.8),
-        rgba(0,0,0,0.2)
-    ),
-    url("assets/header.jpg");
+    background-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.2)),
+        url("assets/header.jpg");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -169,7 +167,6 @@ nav {
 
 .sub-title {
     text-align: center;
-    margin-top: 20px;
 }
 
 .title .support-text {
@@ -190,7 +187,7 @@ nav {
     max-width: 500px;
     margin: auto;
     border-radius: 10px;
-    box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
 }
 
 .about-us__text p {
@@ -215,7 +212,7 @@ nav {
 
 .service__card {
     padding: 1rem;
-    background-color: rgba(139, 139, 139, 0.5);
+    background-color: rgba(223, 217, 217, 0.5);
     border-radius: 1rem;
 }
 
@@ -227,7 +224,7 @@ nav {
     place-content: center;
     font-size: 1.5rem;
     color: var(--white);
-    background-color: rgba(139, 139, 139, 0.5);
+    background-color: rgba(223, 217, 217, 0.5);
     border-radius: .5rem;
 }
 
@@ -239,7 +236,8 @@ nav {
     margin-bottom: 0.5rem;
     font-size: 1.25rem;
     font-weight: 500;
-    color: var(--white);
+    color: #000;
+    /* var(--white) */
 }
 
 .service__card p {
@@ -262,4 +260,205 @@ nav {
 
 .service__card a:hover span {
     transform: translateX(5px);
+}
+
+/* Productos */
+
+.products__container .section__header {
+    text-align: center;
+}
+
+.products__grid {
+    margin-top: 2rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.products__card {
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    border: 2px solid transparent;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.products__card ul li {
+    list-style: none;
+}
+
+
+
+.products__card:hover {
+    border-color: var(--text-dark);
+}
+
+.products__card span {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 5px 13px;
+    font-size: 2rem;
+    color: var(--text-dark);
+    background-color: var(--extra-light);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.products__card:hover span {
+    color: var(--white);
+    background-color: var(--text-dark);
+}
+
+.products__card h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.products__card p {
+    color: var(--text-light);
+}
+
+/* Contáctanos */
+
+.contact-us__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.contact-us__content h4 {
+    font: var(--header-font);
+    font-size: large;
+}
+
+.contact-us__content p {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-us__content p:hover {
+    color: var(--white);
+}
+
+.contact-us__content p span {
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+}
+
+/* Footer */
+
+.footer__bar {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border-top: 1px solid #000;
+}
+
+.footer__bar p {
+    font-size: 1rem;
+    color: #000;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.socials span {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #000;
+    background-color: rgba(223, 217, 217, 0.5);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.socials span:hover {
+    color: var(--white);
+}
+
+/* Links Flotantes */
+
+/* Icono de las redes sociales  */
+
+.container__floating-links {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container__floating-links a {
+    margin-top: 10px;
+}
+
+.container__floating-links a .r1 {
+    color: green;
+    font-size: 50px;
+}
+
+.container__floating-links a .r2 {
+    color: blue;
+}
+
+.container__floating-links a i{
+    font-size: 30px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.0);
+    cursor: pointer;
+    border-radius: 100%;
+    transition: all 300ms;
+}
+
+.container__floating-links a:hover i {
+    background: rgba(0, 0, 0, 0.10);
+
+}
+
+/* Responsive Design */
+
+@media (width < 900px) {
+    .nav__links {
+        gap: 1.5rem;
+    }
+
+    .about-us__image {
+        display: none;
+    }
+
+    .about-us__content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .about-us__text {
+        text-align: center;
+    }
+
+    .service__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .products__grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .contact-us__content {
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+    }
+
+    iframe {
+        display: none;
+    }
 }
