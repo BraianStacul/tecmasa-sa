@@ -87,8 +87,31 @@ nav {
     justify-content: space-between;
 }
 
-.nav__logo {
+/* .nav__logo {
     flex: 1;
+} */
+
+/* Poner aca el logo de tecmasa */
+
+/* .nav__logo img {
+    display: inline;
+    width: 50px;
+    align-items: center;
+} */
+
+.nav__logo {
+    display: grid; /* Usa grid para alinear elementos */
+    grid-template-columns: auto auto; /* Dos columnas, una para la imagen y otra para el texto */
+    grid-column-gap: 10px; /* Espacio entre columnas */
+}
+
+.nav__logo img {
+    width: 50px;
+}
+
+.nav__logo a {
+    display: flex;
+    align-items: center;
 }
 
 .nav__logo a {
@@ -465,7 +488,7 @@ nav {
     }
 }
 
-@media (width < 600px) {
+@media (width < 400px) {
 
     .home {
         display: none;
